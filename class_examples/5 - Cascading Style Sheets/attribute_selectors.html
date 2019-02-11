@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+- Filename: 	attribute_selectors.html
+- Description: 	Class Examples of CSS Attribute Selectors
+- Author: 		Luke Sathrum
+-->
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS Selectors</title>
+		<style>
+			[title] {
+			  font-style: italic;
+			}
+			/* Matched Exactly */
+			[class="heading"] {
+			  color: deepskyblue;
+			}
+			/* Contains */
+			[title*="b"] {
+			  font-variant: small-caps;
+			}
+			/* Starts With */
+			[id^="c"] {
+			  font-size: 10em;
+			}
+			/* Ends With */
+			[id$="n"] {
+			  letter-spacing: 0.5em;
+			}
+			/* Space Separated List */
+			[title~="Dev"] {
+			  transform: rotate(2deg);
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1 class="heading" title="Web Dev" id="main">Web Development</h1>
+		</header>
+		<section>
+			<h2 class="heading">HTML 5</h2>
+			<p title="clickable Dev">HTML5 is a new version of HTML that has not fully been implemented. Most features have been implemented and all major borwsers now support it.</p>
+			<h2>Javascript</h2>
+			<p title="js">Javascript&trade; is another topic related to Web Development</p>
+		</section>
+		<footer>
+			<p id="copyright">&copy; Luke Sathrum</p>
+		</footer>
+	</body>
+</html>
