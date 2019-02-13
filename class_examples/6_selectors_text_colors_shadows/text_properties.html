@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--
+- Filename:     text_properties.html
+- Description: 	Class Example of using CSS Text Properties
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Text Properties</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+p.font-size {
+  font-size: 3em;
+}
+
+.font-style {
+  font-style: italic;
+}
+
+.font-weight {
+  font-weight: bold;
+}
+
+.font-variant {
+  font-variant: small-caps;
+}
+
+.line-height {
+  line-height: 3em;
+}
+
+.indent {
+  text-indent: 2em;
+}
+
+.text-align-middle {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.text-transform {
+  text-transform: uppercase;
+}
+
+.text-decoration {
+  text-decoration: underline;
+}
+
+.letter-spacing {
+  letter-spacing: 1.5em;
+}
+
+.word-spacing {
+  word-spacing: 3em;
+}
+
+.text-shadow-1 {
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.text-shadow-2 {
+  text-shadow: -2px -2px 4px #FF0000;
+}
+
+.text-shadow-3 {
+  text-shadow: 4px 4px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>CSS Text Properties and Values</h1>
+    <div class="container some-text">
+      <h2>Some Text Properties</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;p class=&quot;font-size&quot;&gt;Changing the Font Size&lt;/p&gt;
+&lt;p class=&quot;font-style&quot;&gt;Changing the Font Style&lt;/p&gt;
+&lt;p class=&quot;font-weight&quot;&gt;Changing the Font Weight&lt;/p&gt;
+&lt;p class=&quot;font-variant&quot;&gt;Changing the Font Variant&lt;/p&gt;
+&lt;p class=&quot;line-height&quot;&gt;Changing the&lt;br&gt;Line Height&lt;/p&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">.font-size {
+  font-size: 3em;
+}
+
+.font-style {
+  font-style: italic;
+}
+
+.font-weight {
+  font-weight: bold;
+}
+
+.font-variant {
+  font-variant: small-caps;
+}
+
+.line-height {
+  line-height: 3em;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+    <p class="font-size">Changing the Font Size</p>
+    <p class="font-style">Changing the Font Style</p>
+    <p class="font-weight">Changing the Font Weight</p>
+    <p class="font-variant">Changing the Font Variant</p>
+    <p class="line-height">Changing the<br>Line Height</p>
+  </div>
+
+  <div class="container align">
+    <h2>Text Alignment Properties</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;p class=&quot;indent&quot;&gt;This first line is indented!&lt;br&gt;I am not!&lt;/p&gt;
+&lt;p class=&quot;text-align-middle&quot;&gt;I am aligned in the center&lt;/p&gt;
+&lt;p class=&quot;text-align-right&quot;&gt;I am aligned to the right&lt;/p&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">.indent {
+  text-indent: 2em;
+}
+
+.text-align-middle {
+  text-align: center;
+}
+
+.text-align-right {
+  text-align: right;
+}</code></pre>
+      </div>
+  </div>
+  <h3 class="output">Output:</h3>
+  <p class="indent">This first line is indented!<br>I am not!</p>
+  <p class="text-align-middle">I am aligned in the center</p>
+  <p class="text-align-right">I am aligned to the right</p>
+  </div>
+
+
+  <div class="container more-text">
+    <h2>More Text Properties</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;p class=&quot;text-transform&quot;&gt;transforming the text&lt;/p&gt;
+&lt;p class=&quot;text-decoration&quot;&gt;Adding text decoration&lt;/p&gt;
+&lt;p class=&quot;letter-spacing&quot;&gt;These Letter Have Spacing!&lt;/p&gt;
+&lt;p class=&quot;word-spacing&quot;&gt;These Words Have Spacing!&lt;/p&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">.text-transform {
+  text-transform: uppercase;
+}
+
+.text-decoration {
+  text-decoration: underline;
+}
+
+.letter-spacing {
+  letter-spacing: 1.5em;
+}
+
+.word-spacing {
+  word-spacing: 3em;
+}</code></pre>
+      </div>
+  </div>
+  <h3 class="output">Output:</h3>
+  <p class="text-transform">transforming the text</p>
+  <p class="text-decoration">Adding text decoration</p>
+  <p class="letter-spacing">These Letter Have Spacing!</p>
+  <p class="word-spacing">These Words Have Spacing!</p>
+</div>
+
+<div class="container shadow">
+  <h2>Text Shadows</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;p class=&quot;text-shadow-1&quot;&gt;A Text Shadow&lt;/p&gt;
+&lt;p class=&quot;text-shadow-2&quot;&gt;Another Text Shadow&lt;/p&gt;
+&lt;p class=&quot;text-shadow-3&quot;&gt;A Third Text Shadow&lt;/p&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">.text-shadow-1 {
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.text-shadow-2 {
+  text-shadow: -2px -2px 4px #FF0000;
+}
+
+.text-shadow-3 {
+  text-shadow: 4px 4px;
+}</code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<p class="text-shadow-1">A Text Shadow</p>
+<p class="text-shadow-2">Another Text Shadow</p>
+<p class="text-shadow-3">A Third Text Shadow</p>
+</div>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

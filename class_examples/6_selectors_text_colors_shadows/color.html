@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--
+- Filename:     colors.html
+- Description: 	Class Example of using CSS Colors
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Colors</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+/* For Examples */
+.named-colors p {
+  background: deepskyblue;
+}
+.named-colors p span {
+  background: tomato;
+  color: white;
+}
+
+.rgb-value p {
+  background: rgb(46, 148, 181);
+  color: rgb(255, 244, 224);
+}
+
+.rgb-value p span {
+  background: rgb(84%, 14%, 12%);
+}
+
+.rgb-hex p {
+  background: #2E94B5;
+  color: #FFF4E0;
+}
+
+.rgb-hex p span {
+  background: #D6231E;
+}
+
+.rgba p {
+  background: rgb(46, 148, 181);
+  color: rgb(255, 244, 224);
+}
+
+.rgba p span {
+  background: rgba(214, 35, 30, .5);
+}
+    </style>
+  </head>
+  <body>
+    <h1>CSS Colors</h1>
+    <div class="container named-colors">
+      <h2>Named Colors</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;p&gt;This is some &lt;span&gt;interesting&lt;/span&gt; text&lt;/p&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">p {
+  background: deepskyblue;
+}
+p span {
+  background: tomato;
+  color: white;
+}</code></pre>
+        </div>
+    </div>
+    <h3>Output:</h3>
+    <p>This is some <span>interesting</span> text</p>
+  </div>
+
+  <div class="container rgb-value">
+    <h2>RGB Value Colors</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;p&gt;This is some &lt;span&gt;interesting&lt;/span&gt; text&lt;/p&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">p {
+  background: rgb(46, 148, 181);
+  color: rgb(255, 244, 224);
+}
+
+p span {
+  background: rgb(84%, 14%, 12%);
+}</code></pre>
+        </div>
+    </div>
+    <h3>Output:</h3>
+    <p>This is some <span>interesting</span> text</p>
+  </div>
+
+  <div class="container rgb-hex">
+    <h2>RGB Hexadecimal Colors</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;p&gt;This is some &lt;span&gt;interesting&lt;/span&gt; text&lt;/p&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">p {
+  background: #2E94B5;
+  color: #FFF4E0;
+}
+
+p span {
+  background: #D6231E;
+}</code></pre>
+        </div>
+    </div>
+    <h3>Output:</h3>
+    <p>This is some <span>interesting</span> text</p>
+  </div>
+
+  <div class="container rgba">
+    <h2>RGBa Colors</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;p&gt;This is some &lt;span&gt;interesting&lt;/span&gt; text&lt;/p&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">p {
+  background: rgb(46, 148, 181);
+  color: rgb(255, 244, 224);
+}
+
+p span {
+  background: rgba(214, 35, 30, .5);
+}</code></pre>
+        </div>
+    </div>
+    <h3>Output:</h3>
+    <p>This is some <span>interesting</span> text</p>
+  </div>
+
+
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

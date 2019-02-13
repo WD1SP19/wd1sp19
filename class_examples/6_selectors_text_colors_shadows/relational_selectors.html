@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<!--
+- Filename:     relational_selectors.html
+- Description: 	Class Example of using CSS Relational Selectors
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Relational Selectors</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.descendent article h2 {
+  background: yellow;
+}
+
+.child article>h2 {
+  background: yellow;
+}
+
+.general-sibling h2~p {
+  background: yellow;
+}
+
+.adjacent-sibling h2+p {
+  background: yellow;
+}
+    </style>
+  </head>
+  <body>
+    <h1>CSS Relational Selectors</h1>
+    <div class="container descendent">
+      <h2>Descendent Selector</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;h2&gt;First Heading&lt;/h2&gt;
+&lt;article&gt;
+  &lt;h2&gt;Heading, child of article&lt;/h2&gt;
+  &lt;p&gt;Some Text&lt;/p&gt;
+  &lt;div&gt;
+    &lt;h2&gt;Heading, child of div, descendent of article&lt;/h2&gt;
+    &lt;p&gt;Some Text&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/article&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">article h2 {
+  background: yellow;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+      <h2>First Heading</h2>
+      <article>
+        <h2>Heading, child of article</h2>
+        <p>Some Text</p>
+        <div>
+          <h2>Heading, child of div, descendent of article</h2>
+          <p>Some Text</p>
+        </div>
+      </article>
+  </div>
+
+
+
+
+  <div class="container child">
+    <h2>Child Selector</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;h2&gt;First Heading&lt;/h2&gt;
+&lt;article&gt;
+&lt;h2&gt;Heading, child of article&lt;/h2&gt;
+&lt;p&gt;Some Text&lt;/p&gt;
+&lt;div&gt;
+  &lt;h2&gt;Heading, child of div, descendent of article&lt;/h2&gt;
+  &lt;p&gt;Some Text&lt;/p&gt;
+&lt;/div&gt;
+&lt;/article&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">article>h2 {
+  background: yellow;
+}</code></pre>
+      </div>
+  </div>
+  <h3 class="output">Output:</h3>
+    <h2>First Heading</h2>
+    <article>
+      <h2>Heading, child of article</h2>
+      <p>Some Text</p>
+      <div>
+        <h2>Heading, child of div, descendent of article</h2>
+        <p>Some Text</p>
+      </div>
+    </article>
+</div>
+
+<div class="container general-sibling">
+  <h1>General Sibling Selector</h1>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;p&gt;Outside Section&lt;/p&gt;
+&lt;section&gt;
+  &lt;p&gt;Child of Section&lt;/p&gt;
+  &lt;h2&gt;Child of Section&lt;/h2&gt;
+  &lt;p&gt;Child of Section&lt;/p&gt;
+  &lt;div&gt;
+    &lt;p&gt;Child of Div&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Child of Section&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">h2~p {
+  background: yellow;
+}</code></pre>
+    </div>
+</div>
+  <h3 class="output">Output:</h3>
+  <p>Outside Section</p>
+  <section>
+    <p>Child of Section</p>
+    <h2>Child of Section</h2>
+    <p>Child of Section</p>
+    <div>
+      <p>Child of Div</p>
+    </div>
+    <p>Child of Section</p>
+  </section>
+</div>
+
+
+<div class="container adjacent-sibling">
+  <h1>Adjacent Sibling Selector</h1>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;p&gt;Outside Section&lt;/p&gt;
+&lt;section&gt;
+  &lt;p&gt;Child of Section&lt;/p&gt;
+  &lt;h2&gt;Child of Section&lt;/h2&gt;
+  &lt;p&gt;Child of Section&lt;/p&gt;
+  &lt;div&gt;
+    &lt;p&gt;Child of Div&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;p&gt;Child of Section&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">h2+p {
+  background: yellow;
+}</code></pre>
+    </div>
+</div>
+  <h3 class="output">Output:</h3>
+  <p>Outside Section</p>
+  <section>
+    <p>Child of Section</p>
+    <h2>Child of Section</h2>
+    <p>Child of Section</p>
+    <div>
+      <p>Child of Div</p>
+    </div>
+    <p>Child of Section</p>
+  </section>
+</div>
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

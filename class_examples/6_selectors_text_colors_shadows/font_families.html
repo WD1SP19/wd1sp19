@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<!--
+- Filename:     font_families.html
+- Description: 	Class Example of using CSS Font Families
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Font Families</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.family p,
+.embed p {
+  font-size: 4em;
+}
+
+.serif {
+  font-family: "Times New Roman", times, serif;
+}
+
+.sans-serif {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.mono {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.fantasy {
+  font-family: fantasy;
+}
+
+.cursive {
+  font-family: cursive;
+}
+
+.embed p {
+  font-family: 'Press Start 2P', cursive;
+}
+    </style>
+  </head>
+  <body>
+    <h1>CSS Font Families</h1>
+    <div class="container family">
+      <h2>Basic Font Families</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;p class=&quot;serif&quot;&gt;This is a Serif Font&lt;/p&gt;
+&lt;p class=&quot;sans-serif&quot;&gt;This is a Sans-Serif Font&lt;/p&gt;
+&lt;p class=&quot;mono&quot;&gt;This is a Monospace Font&lt;/p&gt;
+&lt;p class=&quot;fantasy&quot;&gt;This is the Default Fantasy Font&lt;/p&gt;
+&lt;p class=&quot;cursive&quot;&gt;This is the Defult Cursive Font&lt;/p</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">.serif {
+  font-family: "Times New Roman", times, serif;
+}
+
+.sans-serif {
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+.mono {
+  font-family: "Courier New", Courier, monospace;
+}
+
+.fantasy {
+  font-family: fantasy;
+}
+
+.cursive {
+  font-family: cursive;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+    <p class="serif">This is a Serif Font</p>
+    <p class="sans-serif">This is a Sans-Serif Font</p>
+    <p class="mono">This is a Monospace Font</p>
+    <p class="fantasy">This is the Default Fantasy Font</p>
+    <p class="cursive">This is the Defult Cursive Font</p>
+  </div>
+
+
+  <div class="container embed">
+    <h2>Embed a New Font Family</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;head&gt;
+  &lt;link href=&quot;https://fonts.googleapis.com/css?family=Press+Start+2P&quot; rel=&quot;stylesheet&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;This text will use the embeded font&lt;p&gt;
+&lt;/body&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">.serif {
+  font-family: "Times New Roman", times, serif;
+  }
+
+  .sans-serif {
+  font-family: Helvetica, Arial, sans-serif;
+  }
+
+  .mono {
+  font-family: "Courier New", Courier, monospace;
+  }</code></pre>
+      </div>
+  </div>
+  <h3 class="output">Output:</h3>
+  <p>This text will use the embeded font<p>
+  </div>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

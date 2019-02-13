@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!--
+- Filename:     pseudo_selectors.html
+- Description: 	Class Example of using CSS Pseudo Selectors
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Pseudo Selectors</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+/* Non-Visited Link */
+a:link{
+  color: #FF0000;
+}
+/* Visited Link */
+a:visited{
+  color: #228B22;
+}
+/* Click but not released */
+a:active{
+  font-weight: bold;
+}
+/* Hovering or Focus */
+a:hover,
+a:focus{
+  color: #1E90FF;
+}
+
+.not :not(.awesome) {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+.not div:not(.awesome) {
+  background: yellow;
+}
+
+h2:target {
+  background: yellow;
+}
+
+/* The first child of an element */
+.child ul li:first-child{
+  font-weight:bold;
+}
+/* The last child of an element */
+.child ul li:last-child{
+  word-spacing: 3em;
+}
+/* The only child of an element */
+.child ul li:only-child{
+  background: yellow;
+}
+
+.element p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+.element p::first-line {
+  background: yellow;
+}
+
+.element p::selection {
+  /* Can only use color, background,
+     background-color, and text-shadow */
+  color: red;
+}
+
+a.after::after {
+  color: #9799a7;
+  content: " (" attr(href) ")";
+  font-size: 11px;
+}
+
+a.before::before {
+  content: "♥ ";
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>CSS Pseudo Selectors</h1>
+    <div class="container links">
+      <h2>Pseudo-Class for Links Selectors</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;&lt;a class=&quot;one&quot; href=&quot;#&quot;&gt;Link 1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;two&quot; href=&quot;#&quot;&gt;Link 2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;three&quot; href=&quot;#&quot;&gt;Link 3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a class=&quot;four&quot; href=&quot;http://www.google.com&quot;&gt;Google&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">/* Non-Visited Link */
+a:link {
+  color: #FF0000;
+}
+/* Visited Link */
+a:visited {
+  color: #228B22;
+}
+/* Click but not released */
+a:active {
+  font-weight: bold;
+}
+/* Hovering or Focus */
+a:hover,
+a:focus {
+  color: #1E90FF;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+    <ul>
+      <li><a class="one" href="#">Link 1</a></li>
+      <li><a class="two" href="#">Link 2</a></li>
+      <li><a class="three" href="#">Link 3</a></li>
+      <li><a class="four" href="http://www.google.com">Google</a></li>
+    </ul>
+  </div>
+
+
+  <div class="container">
+    <h2>Pseudo-Class :not Selector</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;div&gt;A Div&lt;/div&gt;
+&lt;div class=&quot;awesome&quot;&gt;An Awesome Div&lt;/div&gt;
+&lt;section&gt;A Section&lt;/section&gt;
+&lt;section class=&quot;awesome&quot;&gt;An Awesome Section&lt;/section&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">:not(.awesome) {
+  font-variant: small-caps;
+  font-weight: bold;
+}
+div:not(.awesome) {
+  background: yellow;
+}</code></pre>
+      </div>
+  </div>
+  <h3 class="output">Output:</h3>
+  <div class="not">
+  <div>A Div</div>
+  <div class="awesome">An Awesome Div</div>
+  <section>A Section</section>
+  <section class="awesome">An Awesome Section</section>
+  </div>
+</div>
+
+
+
+<div class="container target">
+  <h2>Pseudo-Class :target Selector</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;h2 id=&quot;the-thing-to-target&quot;&gt;The thing to target&lt;/h2&gt;
+&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+&lt;a href=&quot;#the-thing-to-target&quot;&gt;Click Here to Target&lt;/a&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">h2:target {
+  background: yellow;
+}</code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<h2 id="the-thing-to-target">The thing to target</h2>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<a href="#the-thing-to-target">Click Here to Target</a>
+
+</div>
+
+<div class="container child">
+  <h2>Pseudo-Class child Selectors</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;ul&gt;
+  &lt;li&gt;First Child&lt;/li&gt;
+  &lt;li&gt;Middle Child&lt;/li&gt;
+  &lt;li&gt;Middle Child&lt;/li&gt;
+  &lt;li&gt;Last Child&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ul&gt;
+  &lt;li&gt;First, Middle and Only Child&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">/* The first child of an element */
+ul li:first-child{
+  font-weight:bold;
+}
+/* The last child of an element */
+ul li:last-child{
+  word-spacing: 3em;
+}
+/* The only child of an element */
+ul li:only-child{
+  background: yellow;
+}</code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<ul>
+  <li>First Child</li>
+  <li>Middle Child</li>
+  <li>Middle Child</li>
+  <li>Last Child</li>
+</ul>
+<ul>
+  <li>First, Middle and Only Child</li>
+</ul>
+
+</div>
+
+
+<div class="container element">
+  <h2>Pseudo-Element Selectors</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;p&gt;Chase guns Corsair spike Sink me ho salmagundi Jack Ketch pink belay spyglass.
+Wherry port pressgang Privateer booty swing the lead avast cog fathom walk the plank.
+Fire ship bilged on her anchor galleon Spanish Main landlubber or just lubber gally strike colors swab
+Admiral of the Black run a shot across the bow.&lt;/p&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">p::first-letter {
+  font-size: 200%;
+  font-weight: bold;
+}
+
+p::first-line {
+  background: yellow;
+}
+
+p::selection {
+  /* Can only use color, background,
+     background-color, and text-shadow */
+  color: red;
+}</code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<p>Chase guns Corsair spike Sink me ho salmagundi Jack Ketch pink belay spyglass. Wherry port pressgang Privateer booty swing the lead avast cog fathom walk the plank. Fire ship bilged on her anchor galleon Spanish Main landlubber or just lubber gally strike colors swab Admiral of the Black run a shot across the bow.</p>
+</div>
+
+<div class="container generated">
+  <h2>Pseudo-Element Generated Content Selectors</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;a href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;&lt;br&gt;
+&lt;a class=&quot;before&quot; href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;&lt;br&gt;
+&lt;a class=&quot;after&quot; href=&quot;http://google.com/&quot;&gt;Search the Web&lt;/a&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">a.after::after {
+  color: #9799a7;
+  content: " (" attr(href) ")";
+  font-size: 11px;
+}
+
+a.before::before {
+  content: "♥ ";
+}</code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<a href="http://google.com/">Search the Web</a><br>
+<a class="before" href="http://google.com/">Search the Web</a><br>
+<a class="after" href="http://google.com/">Search the Web</a>
+</div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>
