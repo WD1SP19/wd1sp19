@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<!--
+- Filename:     ignoring_box_model.html
+- Description: 	Class Example of how to ignore the CSS Box Model
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The CSS Box Model</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+h4 {
+	margin-top: 2em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+.outside_simple_box {
+	border: 10px solid #000000;
+	width: 500px;
+	margin: 0 auto;
+}
+
+.outside_fancy_box {
+	border: 10px solid #000000;
+	width: 620px;
+	margin: 0 auto;
+}
+
+.simple {
+	width: 500px;
+	margin: 20px auto;
+}
+
+.fancy {
+	width: 500px;
+	margin: 20px auto;
+	padding: 50px;
+	border-width: 10px;
+	border-color: #0000FF;
+	border-style: dashed;
+}
+
+.simple-border-box {
+	width: 500px;
+	margin: 20px auto;
+	box-sizing: border-box;
+}
+.fancy-border-box {
+	width: 500px;
+	margin: 20px auto;
+	padding: 50px;
+	border-width: 10px;
+	border-color: #0000FF;
+	border-style: dashed;
+	box-sizing: border-box;
+}
+.outside_no_simple_box ,
+.outside_no_fancy_box {
+	border: 10px solid #000000;
+	width: 500px;
+	margin: 0 auto;
+}
+    </style>
+  </head>
+  <body>
+    <h1>The CSS Box Model</h1>
+    <div class="container box">
+      <h2>A Simple Box</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section class=&quot;simple&quot;&gt;
+  &lt;p&gt;I'm a simple box&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">.simple {
+	width: 500px;
+	margin: 20px auto;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<div class="outside_simple_box">
+			<section class="simple">
+				<p>I'm a simple box</p>
+			</section>
+		</div>
+  </div>
+
+	<div class="container box">
+		<h2>A Fancy Box</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section class=&quot;fancy&quot;&gt;
+	&lt;p&gt;I'm a fancy box&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">.fancy {
+	width: 500px;
+	margin: 20px auto;
+	padding: 50px;
+	border-width: 10px;
+	border-color: #0000FF;
+	border-style: dashed;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<div class="outside_fancy_box">
+		<section class="fancy">
+			<p>I'm a fancy box</p>
+		</section>
+	</div>
+	<h4>vs.</h4>
+	<div class="outside_simple_box">
+		<section class="simple">
+			<p>I'm a simple box</p>
+		</section>
+	</div>
+	</div>
+
+
+	<div class="container box">
+		<h2>A Simple Box, Ignoring the Box Model</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section class=&quot;simple-border-box&quot;&gt;
+  &lt;p&gt;I'm a simple box that doesn't follow the box model!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">.simple-border-box {
+	width: 500px;
+	margin: 20px auto;
+	box-sizing: border-box;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<div class="outside_no_simple_box">
+		<section class="simple-border-box">
+			<p>I'm a simple box that doesn't follow the box model!</p>
+		</section>
+	</div>
+</div>
+
+
+<div class="container box">
+	<h2>A Fancy Box, Ignoring the Box Model</h2>
+	<div class="flex-example">
+		<div>
+			<h3>HTML</h3>
+				<pre><code class="language-html">&lt;section class=&quot;fancy-border-box&quot;&gt;
+	&lt;p&gt;I'm a fancy box that doesn't follow the box model!&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+		</div>
+		<div>
+			<h3>CSS</h3>
+				<pre><code class="language-css">.fancy-border-box {
+	width: 500px;
+	margin: 20px auto;
+	padding: 50px;
+	border-width: 10px;
+	border-color: #0000FF;
+	border-style: dashed;
+	box-sizing: border-box;
+}</code></pre>
+		</div>
+</div>
+<h3 class="output">Output:</h3>
+<div class="outside_no_fancy_box">
+	<section class="fancy-border-box">
+		<p>I'm a fancy box that doesn't follow the box model!</p>
+	</section>
+</div>
+<h4>vs.</h4>
+<div class="outside_fancy_box">
+	<section class="fancy">
+		<p>I'm a fancy box</p>
+	</section>
+</div>
+<h4>vs.</h4>
+<div class="outside_no_simple_box">
+	<section class="simple-border-box">
+		<p>I'm a simple box that doesn't follow the box model!</p>
+	</section>
+</div>
+<h4>vs.</h4>
+<div class="outside_simple_box">
+	<section class="simple">
+		<p>I'm a simple box</p>
+	</section>
+</div>
+</div>
+
+<div class="container box">
+	<h2>Ignore the Box Model for Entire Website</h2>
+	<div class="flex-example">
+		<div>
+			<h3>HTML</h3>
+				<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta charset=&quot;UTF-8&quot;&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+	&lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;
+	&lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+		</div>
+		<div>
+			<h3>CSS</h3>
+				<pre><code class="language-css">html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}</code></pre>
+		</div>
+</div>
+
+</div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

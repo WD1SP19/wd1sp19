@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+- Filename:     rounded_borders_and_shadows.html
+- Description: 	Class Example of using CSS Box Model
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rounded Borders and Shadows</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+section {
+	width: 50%;
+	padding: 1em;
+	border: 3px solid #000000;
+	border-radius: 10px 0 15px 30px;
+	box-shadow: 10px 10px 5px 5px #888888;
+}
+article {
+	border-left: 3px double #000000;
+	padding-left: 1em;
+	border-radius: 30px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>Rounded Borders and Shadows</h1>
+    <div class="container round">
+      <h2>Example</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section&gt;
+	&lt;p&gt;This section has a black solid border with rounded corners.&lt;/p&gt;
+	&lt;article&gt;
+		&lt;p&gt;This article has a left double border with large rounded corneres.&lt;/p&gt;
+	&lt;/article&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">section {
+	width: 50%;
+	padding: 1em;
+	border: 3px solid #000000;
+	border-radius: 10px 0 15px 30px;
+	box-shadow: 10px 10px 5px 5px #888888;
+}
+article {
+	border-left: 3px double #000000;
+	padding-left: 1em;
+	border-radius: 30px;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<section>
+			<p>This section has a black solid border with rounded corners.</p>
+			<article>
+				<p>This article has a left double border with large rounded corneres.</p>
+			</article>
+		</section>
+  </div>
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

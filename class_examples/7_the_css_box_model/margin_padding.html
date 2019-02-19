@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<!--
+- Filename:     margin-padding.html
+- Description: 	Class Example of using CSS Margin and Padding Properties
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The CSS Box Model - Margins and Padding</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+
+/* For Examples */
+.margin section p:first-child {
+	margin-bottom: 3em;
+}
+.margin section p:last-child {
+	margin-top: 3em;
+}
+
+.padding section p:first-child {
+	padding-bottom: 3em;
+	background: #EBEBEB;
+}
+.padding section p:last-child {
+	padding-top: 3em;
+	background: #BEBEBE;
+}
+
+.centered section {
+	width: 400px;
+	margin: 0 auto;
+	padding: 1em;
+	border: 1px solid black;
+}
+    </style>
+  </head>
+  <body>
+    <h1>The CSS Box Model - Padding</h1>
+    <div class="container margin">
+      <h2>Collapsed Margins</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section&gt;
+	&lt;p&gt;This paragraph has a bottom margin of 3em.&lt;/p&gt;
+	&lt;p&gt;This paragraph has a top margin of 3em. The space above is only 3em, not 6em.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">section p:first-child {
+	margin-bottom: 3em;
+}
+section p:last-child {
+	margin-top: 3em;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<section>
+			<p>This paragraph has a bottom margin of 3em.</p>
+			<p>This paragraph has a top margin of 3em. The space above is 3em, not 6em.</p>
+		</section>
+  </div>
+
+	<div class="container padding">
+		<h2>Padding Does Not Collapse</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section&gt;
+  &lt;p&gt;This paragraph has a bottom padding of 3em.&lt;/p&gt;
+  &lt;p&gt;This paragraph has a top padding of 3em. The space above is 6em, plus margins.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">section p:first-child {
+  padding-bottom: 3em;
+	background: #EBEBEB;
+}
+section p:last-child {
+  padding-top: 3em;
+	background: #BEBEBE;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section>
+		<p>This paragraph has a bottom padding of 3em.</p>
+		<p>This paragraph has a top padding of 3em. The space above is 6em, plus margins.</p>
+	</section>
+</div>
+
+<div class="container centered">
+	<h2>Center a Block Element</h2>
+	<div class="flex-example">
+		<div>
+			<h3>HTML</h3>
+				<pre><code class="language-html">&lt;section&gt;
+  &lt;p&gt;This is a paragraph.&lt;/p&gt;
+  &lt;p&gt;This is another paragraph.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+		</div>
+		<div>
+			<h3>CSS</h3>
+				<pre><code class="language-css">section {
+	width: 400px;
+	margin: 0 auto;
+	padding: 1em;
+	border: 1px solid black;
+}</code></pre>
+		</div>
+</div>
+<h3 class="output">Output:</h3>
+<section>
+	<p>This is a paragraph.</p>
+	<p>This is another paragraph.</p>
+</section>
+</div>
+
+
+
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

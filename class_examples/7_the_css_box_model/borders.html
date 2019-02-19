@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!--
+- Filename:     borders.html
+- Description: 	Class Example of using CSS Borders
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Borders</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.basic section {
+	border: 1px dashed #000000;
+}
+
+.double section p {
+	border-left: 3px double #000000;
+	padding-left: 1em;
+}
+
+.double section p:hover {
+	border-left-color: #FF0000;
+	border-left-width: 16px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>CSS Borders</h1>
+    <div class="container basic">
+      <h2>Basic Border</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section&gt;
+	&lt;h1&gt;CSS Box Model&lt;/h1&gt;
+	&lt;p&gt;This is an example of the CSS Box Model.
+	   All block elements get put in a box.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">section {
+	border: 1px dashed #000000;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<section>
+			<h1>CSS Box Model</h1>
+			<p>This is an example of the CSS Box Model.
+			   All block elements get put in a box.</p>
+		</section>
+  </div>
+
+	<div class="container double">
+		<h2>Other Borders</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section&gt;
+	&lt;h1&gt;CSS Box Model&lt;/h1&gt;
+	&lt;p&gt;This is an example of the CSS Box Model.
+		 All block elements get put in a box.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">section p {
+	border-left: 3px double #000000;
+	padding-left: 1em;
+}
+
+section p:hover {
+	border-left-color: #FF0000;
+	border-left-width: 16px;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section>
+		<h1>CSS Box Model</h1>
+		<p>This is an example of the CSS Box Model.
+			 All block elements get put in a box.</p>
+	</section>
+</div>
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+- Filename:     size.html
+- Description: 	Class Example of CSS size properties/values
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The CSS Box Model - Sizes</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.absolute p {
+	padding: 1em;
+	height: 300px;
+	width: 500px;
+	background: #BEBEBE;
+}
+
+.max p {
+	width: 75%;
+	max-width: 600px;
+	border: 1px solid #000000;
+}
+
+.min p {
+	width: 75%;
+	min-width: 500px;
+	border: 1px solid #000000;
+}
+    </style>
+  </head>
+  <body>
+    <h1>The CSS Box Model - Sizes</h1>
+    <div class="container absolute">
+      <h2>Absolute Values</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;p&gt;Pig fatback doner short ribs ground round beef ribs salami jerky
+tenderloin andouille pork belly. Bacon doner andouille, biltong tri-tip rump shank.
+Meatball sausage tail chuck, pancetta venison flank alcatra corned beef turkey. Sirloin
+short ribs rump andouille, cupim shoulder bresaola pancetta.&lt;/p&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">p {
+	padding: 1em;
+	height: 300px;
+	width: 500px;
+	background: #BEBEBE;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<p>Pig fatback doner short ribs ground round beef ribs salami jerky tenderloin andouille pork belly. Bacon doner andouille, biltong tri-tip rump shank. Meatball sausage tail chuck, pancetta venison flank alcatra corned beef turkey. Sirloin short ribs rump andouille, cupim shoulder bresaola pancetta.</p>
+  </div>
+
+	<div class="container max">
+		<h2>Max Value</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;p&gt;Pig fatback doner short ribs ground round beef ribs salami jerky
+tenderloin andouille pork belly. Bacon doner andouille, biltong tri-tip rump shank.
+Meatball sausage tail chuck, pancetta venison flank alcatra corned beef turkey. Sirloin
+short ribs rump andouille, cupim shoulder bresaola pancetta.&lt;/p&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">p {
+	width: 75%;
+	max-width: 600px;
+	border: 1px solid #000000;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<p>Pig fatback doner short ribs ground round beef ribs salami jerky tenderloin andouille pork belly. Bacon doner andouille, biltong tri-tip rump shank. Meatball sausage tail chuck, pancetta venison flank alcatra corned beef turkey. Sirloin short ribs rump andouille, cupim shoulder bresaola pancetta.</p>
+</div>
+
+<div class="container min">
+	<h2>Minimum Value</h2>
+	<div class="flex-example">
+		<div>
+			<h3>HTML</h3>
+				<pre><code class="language-html">&lt;p&gt;Pig fatback doner short ribs ground round beef ribs salami jerky
+tenderloin andouille pork belly. Bacon doner andouille, biltong tri-tip rump shank.
+Meatball sausage tail chuck, pancetta venison flank alcatra corned beef turkey. Sirloin
+short ribs rump andouille, cupim shoulder bresaola pancetta.&lt;/p&gt;</code></pre>
+		</div>
+		<div>
+			<h3>CSS</h3>
+				<pre><code class="language-css">p {
+	width: 75%;
+	min-width: 500px;
+	border: 1px solid #000000;
+}</code></pre>
+		</div>
+</div>
+<h3 class="output">Output:</h3>
+<p>Pig fatback doner short ribs ground round beef ribs salami jerky tenderloin andouille pork belly. Bacon doner andouille, biltong tri-tip rump shank. Meatball sausage tail chuck, pancetta venison flank alcatra corned beef turkey. Sirloin short ribs rump andouille, cupim shoulder bresaola pancetta.</p>
+</div>
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

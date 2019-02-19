@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--
+- Filename:     margin.html
+- Description: 	Class Example of using CSS Margin Properties
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The CSS Box Model - Margin</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+	margin-bottom: 0;
+}
+
+h4 { margin: 0; border-top: 1px solid black;}
+
+/* For Examples */
+p {
+	background: #BEBEBE;
+}
+
+.all p {
+	margin: 3em; /* All Four Sides */
+}
+
+.two p {
+	margin: 0 2em;	/* Top/Bottom 0, Right/Left 2em */
+}
+
+.three p {
+	margin: 0 2em 3em; /* Top 0, Right/Left 2em, Bottom 3em */
+}
+
+.four p {
+	margin: 1em 2em 3em 4em; /* Top 1em, Right 2em, Bottom 3em, Left 4em */
+}
+
+.one-side p {
+	margin-bottom: 5em;
+}
+    </style>
+  </head>
+  <body>
+    <h1>The CSS Box Model - Margin</h1>
+    <div class="container all">
+      <h2>Margin Shortcut - All Sides</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;p&gt;Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see
+owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr
+purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let
+me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can
+lightly brush human's nose poop on floor and watch human clean up run in circles.&lt;/p&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">p {
+	margin: 3em; /* All Four Sides */
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<section>
+			<p>Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can lightly brush human's nose poop on floor and watch human clean up run in circles.</p>
+			<h4></h4>
+		</section>
+  </div>
+
+	<div class="container two">
+		<h2>Margin Shortcut - Two Values</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;p&gt;Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see
+owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr
+purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let
+me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can
+lightly brush human's nose poop on floor and watch human clean up run in circles.&lt;/p&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">p {
+    margin: 0 2em;	/* Top/Bottom 0, Right/Left 2em */
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section>
+		<p>Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can lightly brush human's nose poop on floor and watch human clean up run in circles.</p>
+		<h4></h4>
+	</section>
+</div>
+
+<div class="container three">
+	<h2>Margin Shortcut - Three Values</h2>
+	<div class="flex-example">
+		<div>
+			<h3>HTML</h3>
+				<pre><code class="language-html">&lt;p&gt;Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see
+owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr
+purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let
+me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can
+lightly brush human's nose poop on floor and watch human clean up run in circles.&lt;/p&gt;</code></pre>
+		</div>
+		<div>
+			<h3>CSS</h3>
+				<pre><code class="language-css">p {
+	  margin: 0 2em 3em; /* Top 0, Right/Left 2em, Bottom 3em */
+}</code></pre>
+		</div>
+</div>
+<h3 class="output">Output:</h3>
+<section>
+	<p>Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can lightly brush human's nose poop on floor and watch human clean up run in circles.</p>
+	<h4></h4>
+</section>
+</div>
+
+<div class="container four">
+	<h2>Margin - Explicity Set All Four Values</h2>
+	<div class="flex-example">
+		<div>
+			<h3>HTML</h3>
+				<pre><code class="language-html">&lt;p&gt;Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see
+owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr
+purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let
+me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can
+lightly brush human's nose poop on floor and watch human clean up run in circles.&lt;/p&gt;</code></pre>
+		</div>
+		<div>
+			<h3>CSS</h3>
+				<pre><code class="language-css">p {
+	  margin: 1em 2em 3em 4em; /* Top 1em, Right 2em, Bottom 3em, Left 4em */
+}</code></pre>
+		</div>
+</div>
+<h3 class="output">Output:</h3>
+<section>
+	<p>Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can lightly brush human's nose poop on floor and watch human clean up run in circles.</p>
+	<h4></h4>
+</section>
+</div>
+
+<div class="container one-side">
+	<h2>Margin - Set Just One Side</h2>
+	<div class="flex-example">
+		<div>
+			<h3>HTML</h3>
+				<pre><code class="language-html">&lt;p&gt;Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see
+owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr
+purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let
+me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can
+lightly brush human's nose poop on floor and watch human clean up run in circles.&lt;/p&gt;</code></pre>
+		</div>
+		<div>
+			<h3>CSS</h3>
+				<pre><code class="language-css">p {
+	  margin-bottom: 5em;
+}</code></pre>
+		</div>
+</div>
+<h3 class="output">Output:</h3>
+<section>
+	<p>Cats making all the muffins asdflkjaertvlkjasntvkjn (sits on keyboard), mew but see owner, run in terror all of a sudden cat goes crazy love blinks and purr purr purr purr yawn. Sit on the laptop open the door, let me out, let me out, let me-out, let me-aow, let meaow, meaow!. Always ensure to lay down in such a manner that tail can lightly brush human's nose poop on floor and watch human clean up run in circles.</p>
+	<h4></h4>
+</section>
+</div>
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>
