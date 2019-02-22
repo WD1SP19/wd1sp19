@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+- Filename:     box_model.html
+- Description: 	Class Example of using CSS Box Model
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>The CSS Box Model</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.box section {
+	border: 2px solid #000000;
+	width: 500px;
+	margin: 20px;	/* All Four Sides */
+	padding: 10px;	/* All Four Sides */
+}
+.box h1,
+.box p {
+	border: 1px dashed #000000;
+	padding-left: 15px;
+}
+.box h1 {
+	margin: .5em 0 .25em;	/* .5em top, 0 right and left, .25em bottom */
+}
+.box p {
+	margin: 0;	/* All Four Sides */
+}
+    </style>
+  </head>
+  <body>
+    <h1>The CSS Box Model</h1>
+    <div class="container box">
+      <h2>An example of the CSS Box Model</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section&gt;
+	&lt;h1&gt;CSS Box Model&lt;/h1&gt;
+	&lt;p&gt;This is an example of the CSS Box Model.
+	   All block elements get put in a box.&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">section {
+	border: 2px solid #000000;
+	width: 500px;
+	margin: 20px;	/* All Four Sides */
+	padding: 10px;	/* All Four Sides */
+}
+h1,
+p {
+	border: 1px dashed #000000;
+	padding-left: 15px;
+}
+h1 {
+	margin: .5em 0 .25em;	/* .5em top, 0 right and left, .25em bottom */
+}
+p {
+	margin: 0;	/* All Four Sides */
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<section>
+			<h1>CSS Box Model</h1>
+			<p>This is an example of the CSS Box Model.
+			   All block elements get put in a box.</p>
+		</section>
+  </div>
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

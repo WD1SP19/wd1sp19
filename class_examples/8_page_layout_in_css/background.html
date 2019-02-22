@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<!--
+- Filename:     background.html
+- Description: 	Class Example of using CSS Background Properties
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Background</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.background section {
+	background-color: #BEBEBE;
+	padding: 2em;
+	width: 80%;
+	margin: 0 auto;
+}
+.background h1 {
+	background-color: #00858B;
+	padding: 1em;
+	color: #FFFFFF;
+}
+.background section>h3 {
+	background: #EE3E80; /* Note you can leave off the -color */
+	padding: 1em;
+	color: #FFFFFF;
+}
+.background p {
+	background-color: #FFFFFF; /* Note you can leave off the -color */
+	padding: 1em;
+}
+
+.background-image section {
+	height: 350px;
+	border: 1px solid #000000;
+	background-image: url("html5.png");
+	/*
+	background-repeat: repeat-x;
+	background-repeat: repeat-y;
+	background-repeat: no-repeat;
+	*/
+}
+
+.good-image section {
+	height: 350px;
+	border: 1px solid #000000;
+	margin: 1em 0;
+	background-image: url("bg.jpg");
+	background-color: #000000; /* Good to have fallback color */
+}
+
+.no-repeat {
+	background-repeat: no-repeat;
+}
+
+
+ul.menu {
+    list-style-type: none;
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		vertical-align: top;
+}
+
+ul.menu li {
+	width: 50px;
+	height: 50px;
+	background: url("sprite.png") no-repeat;
+	display: inline-block;
+}
+
+ul.menu li.firefox:hover {
+	background-position: 0 -50px;
+}
+
+ul.menu li.chrome {
+    background-position: 0 -100px;
+}
+ul.menu li.chrome:hover {
+    background-position: 0 -150px;
+}
+ul.menu li.ie {
+    background-position: 0 -200px;
+}
+ul.menu li.ie:hover {
+    background-position: 0 -250px;
+}
+ul.menu li.safari {
+    background-position: 0 -300px;
+}
+ul.menu li.safari:hover {
+    background-position: 0 -350px;
+}
+ul.menu li.opera {
+    background-position: 0 -400px;
+}
+ul.menu li.opera:hover {
+    background-position: 0 -450px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>CSS Background</h1>
+    <div class="container background">
+      <h2>CSS Backgrounds</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section&gt;
+	&lt;h1&gt;Main Heading&lt;/h1&gt;
+	&lt;h3&gt;Subheading with some more words&lt;/h3&gt;
+	&lt;p&gt;
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit...
+	  Maecenas sit amet lacinia lectus. Ut condimentum orci...
+	&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">section {
+	background-color: #BEBEBE;
+	padding: 2em;
+	width: 80%;
+	margin: 0 auto;
+}
+h1 {
+	background-color: #00858B;
+	padding: 1em;
+	color: #FFFFFF;
+}
+h3 {
+	background: #EE3E80; /* Note you can leave off the -color */
+	padding: 1em;
+	color: #FFFFFF;
+}
+p {
+	background-color: #FFFFFF;
+	padding: 1em;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<section>
+			<h1>Main Heading</h1>
+			<h3>Subheading with some more words</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ut diam orci. Proin viverra quam at mauris scelerisque, id eleifend lorem eleifend. Etiam tempor turpis a velit dignissim consectetur. Phasellus non egestas orci. Aenean convallis semper odio. Nam metus nunc, congue sit amet vestibulum interdum, rhoncus eu sapien. Nullam non lacus dui. Phasellus ac quam eget lectus tristique tempor. Phasellus eget rutrum justo. Quisque vel bibendum magna. Suspendisse a purus enim. Maecenas sit amet lacinia lectus. Ut condimentum orci sit amet purus egestas, quis aliquam quam faucibus. Phasellus in orci a lorem mattis consectetur id a lorem. Sed mattis tortor in ipsum pulvinar, nec sollicitudin nunc tempor.</p>
+		</section>
+  </div>
+
+	<div class="container background-image">
+		<h2>CSS Background Image (Repeats by default)</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section&gt;&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">section {
+	height: 350px;
+	border: 1px solid #000000;
+	background-image: url("html5.png");
+	/*
+	background-repeat: repeat-x;
+	background-repeat: repeat-y;
+	background-repeat: no-repeat;
+	*/
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section></section>
+
+	</div>
+
+
+	<div class="container good-image">
+		<h2>CSS Background Image Built to Repeat</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section class=&quot;no-repeat&quot;&gt;&lt;/section&gt;
+&lt;section&gt;&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">section {
+	height: 350px;
+	border: 1px solid #000000;
+	margin: 1em 0;
+	background-image: url("bg.jpg");
+	background-color: #000000; /* Good to have fallback color */
+}
+
+.no-repeat {
+	background-repeat: no-repeat;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section class="no-repeat"></section>
+	<section></section>
+
+	</div>
+
+	<div class="container sprite">
+		<h2>Sprites to the Rescue!</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;img src=&quot;sprite.png&quot; alt=&quot;Browser Images&quot;&gt;
+&lt;ul class=&quot;menu&quot;&gt;
+  &lt;li aria-label=&quot;firefox&quot; class=&quot;firefox&quot;&gt;&lt;/li&gt;
+  &lt;li aria-label=&quot;chrome&quot; class=&quot;chrome&quot;&gt;&lt;/li&gt;
+  &lt;li aria-label=&quot;internet explorer&quot; class=&quot;ie&quot;&gt;&lt;/li&gt;
+  &lt;li aria-label=&quot;opera&quot; class=&quot;opera&quot;&gt;&lt;/li&gt;
+  &lt;li aria-label=&quot;safari&quot; class=&quot;safari&quot;&gt;&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">ul.menu {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+
+ul.menu li {
+	width: 50px;
+	height: 50px;
+	background: url("sprite.png") no-repeat;
+	display: inline-block;
+}
+
+ul.menu li.firefox:hover {
+	background-position: 0 -50px;
+}
+
+ul.menu li.chrome {
+    background-position: 0 -100px;
+}
+ul.menu li.chrome:hover {
+    background-position: 0 -150px;
+}
+ul.menu li.ie {
+    background-position: 0 -200px;
+}
+ul.menu li.ie:hover {
+    background-position: 0 -250px;
+}
+ul.menu li.safari {
+    background-position: 0 -300px;
+}
+ul.menu li.safari:hover {
+    background-position: 0 -350px;
+}
+ul.menu li.opera {
+    background-position: 0 -400px;
+}
+ul.menu li.opera:hover {
+    background-position: 0 -450px;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<img src="sprite.png" alt="Browser Images">
+	<ul class="menu">
+	  <li aria-label="firefox" class="firefox"></li>
+	  <li aria-label="chrome" class="chrome"></li>
+	  <li aria-label="internet explorer" class="ie"></li>
+	  <li aria-label="opera" class="opera"></li>
+	  <li aria-label="safari" class="safari"></li>
+	</ul>
+
+	</div>
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<!--
+- Filename:     position.html
+- Description: 	Class Example of using CSS Position Properties
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Positioning</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.relative section {
+	width: 100px;
+	height: 100px;
+	background: deepskyblue;
+	margin: .25em 0;
+}
+
+.relative section span {
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 100px;
+	top: 20px;
+	left: 20px;
+	background: forestgreen;
+}
+
+.absolute h4 {
+	position: absolute;
+	top: 50px;
+	right: 100px;
+	background: black;
+	color: #FFFFFF;
+	z-index: 1;
+	height: 100px;
+}
+
+.absolute h5 {
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	z-index: 2;
+	background: #FFFFFF;
+	border: 2px solid #000000;
+	padding: .5em;
+}
+
+footer {
+	position: fixed;
+	bottom: 0;
+	height: 50px;
+	background: #000000;
+	color: #FFFFFF;
+	text-align: center;
+	width: 100%;
+}
+    </style>
+  </head>
+  <body>
+    <h1>The CSS Box Model</h1>
+    <div class="container relative">
+      <h2>Relative Positioning</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section&gt;&lt;/section&gt;
+&lt;section&gt;&lt;span&gt;Relative&lt;/span&gt;&lt;/section&gt;
+&lt;section&gt;&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">section {
+	width: 100px;
+	height: 100px;
+	background: deepskyblue;
+	margin: .25em 0;
+}
+
+section span {
+	position: relative;
+	display: block;
+	width: 100px;
+	height: 100px;
+	top: 20px;
+	left: 20px;
+	background: forestgreen;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<section></section>
+		<section><span>Relative</span></section>
+		<section></section>
+  </div>
+
+
+	<div class="container absolute">
+		<h2>Absolute Positioning</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section&gt;
+	&lt;h4&gt;Absolute&lt;/h4&gt;
+	&lt;h5&gt;Over Absolute&lt;/h5&gt;
+	&lt;p&gt;Just Some Regular Text&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">h4 {
+	position: absolute;
+	top: 50px;
+	right: 100px;
+	background: black;
+	color: #FFFFFF;
+	z-index: 1;
+	height: 100px;
+}
+
+h5 {
+	position: absolute;
+	right: 50px;
+	top: 50px;
+	z-index: 2;
+	background: #FFFFFF;
+	border: 2px solid #000000;
+	padding: .5em;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section>
+		<h4>Absolute</h4>
+		<h5>Over Absolute</h5>
+		<p>Just Some Regular Text</p>
+	</section>
+</div>
+
+<div class="container fixed">
+	<h2>Fixed Positioning</h2>
+	<div class="flex-example">
+		<div>
+			<h3>HTML</h3>
+				<pre><code class="language-html">&lt;footer&gt;
+	&lt;p&gt;This footer is fixed to the bottom of the page&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
+		</div>
+		<div>
+			<h3>CSS</h3>
+				<pre><code class="language-css">footer {
+	position: fixed;
+	bottom: 0;
+	height: 50px;
+	background: #000000;
+	color: #FFFFFF;
+	text-align: center;
+	width: 100%;
+}</code></pre>
+		</div>
+</div>
+<h3 class="output">Output:</h3>
+<footer>
+	<p>This footer is fixed to the bottom of the page</p>
+</footer>
+</div>
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

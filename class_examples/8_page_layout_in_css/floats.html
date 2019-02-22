@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<!--
+- Filename:     floats.html
+- Description: 	Class Example of CSS Float Properties
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CSS Floats</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+p {margin: 0;}
+.float .left {
+	float: left;
+	margin-right: 10px;
+	background: #EBEBEB;
+}
+.float .right {
+	float: right;
+	background: #BEBEBE;
+}
+.float section p:last-child {
+	background: tomato;
+}
+
+code {
+  background: #2DB34A;
+  border-radius: 6px;
+  color: #FFFFFF;
+  display: block;
+  padding: 24px 15px;
+  text-align: center;
+}
+
+.not-clear header,
+.clear header,
+.not-clear section,
+.clear section,
+.not-clear aside,
+.clear aside,
+.not-clear footer,
+.clear footer {
+  margin: 0 1.5% 24px 1.5%;
+}
+
+.not-clear section {
+  float: left;
+}
+.not-clear aside {
+  float: right;
+}
+
+.clear section {
+  float: left;
+}
+.clear aside {
+  float: right;
+}
+.clear footer {
+	clear: both;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>CSS Floats</h1>
+    <div class="container float">
+      <h2>An example of the CSS Floats</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section&gt;
+	&lt;p class=&quot;left&quot;&gt;Floated Left&lt;/p&gt;
+	&lt;p class=&quot;right&quot;&gt;Floated Right&lt;/p&gt;
+	&lt;p&gt;No Float, &lt;br&gt;
+	   Should be wrapping around&lt;br&gt;
+	   the left float&lt;/p&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">.left {
+	float: left;
+	margin-right: 10px;
+	background: #EBEBEB;
+}
+.right {
+	float: right;
+	background: #BEBEBE;
+}
+section p:last-child {
+	background: tomato;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<section>
+			<p class="left">Floated Left</p>
+			<p class="right">Floated Right</p>
+			<p>No Float, <br>
+						  Should be wrapping around<br>
+						  the left float</p>
+		</section>
+  </div>
+
+
+	<div class="container not-clear">
+		<h2>An example of (Not) Clearing Floats</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;header&gt;
+  &lt;code&gt;&amp;#60;header&amp;#62;&lt;/code&gt;
+&lt;/header&gt;
+&lt;section&gt;
+  &lt;code&gt;&amp;#60;section&amp;#62; &lt;br&gt; float: left;&lt;/code&gt;
+&lt;/section&gt;
+&lt;aside&gt;
+  &lt;code&gt;&amp;#60;aside&amp;#62; &lt;br&gt; float: right;&lt;/code&gt;
+&lt;/aside&gt;
+&lt;footer&gt;
+  &lt;code&gt;&amp;#60;footer&amp;#62;&lt;/code&gt;
+&lt;/footer&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">section {
+  float: left;
+}
+aside {
+  float: right;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<header>
+	  <code>&#60;header&#62;</code>
+	</header>
+	<section>
+	  <code>&#60;section&#62; <br> float: left;</code>
+	</section>
+	<aside>
+	  <code>&#60;aside&#62; <br> float: right;</code>
+	</aside>
+	<footer>
+	  <code>&#60;footer&#62;</code>
+	</footer>
+</div>
+
+<div class="container clear">
+	<h2>An example of Clearing Floats</h2>
+	<div class="flex-example">
+		<div>
+			<h3>HTML</h3>
+				<pre><code class="language-html">&lt;header&gt;
+&lt;code&gt;&amp;#60;header&amp;#62;&lt;/code&gt;
+&lt;/header&gt;
+&lt;section&gt;
+&lt;code&gt;&amp;#60;section&amp;#62; &lt;br&gt; float: left;&lt;/code&gt;
+&lt;/section&gt;
+&lt;aside&gt;
+&lt;code&gt;&amp;#60;aside&amp;#62; &lt;br&gt; float: right;&lt;/code&gt;
+&lt;/aside&gt;
+&lt;footer&gt;
+&lt;code&gt;&amp;#60;footer&amp;#62;&lt;/code&gt;
+&lt;/footer&gt;</code></pre>
+		</div>
+		<div>
+			<h3>CSS</h3>
+				<pre><code class="language-css">section {
+  float: left;
+}
+aside {
+  float: right;
+}
+footer {
+	clear: both:
+}</code></pre>
+		</div>
+</div>
+<h3 class="output">Output:</h3>
+<header>
+	<code>&#60;header&#62;</code>
+</header>
+<section>
+	<code>&#60;section&#62; <br> float: left;</code>
+</section>
+<aside>
+	<code>&#60;aside&#62; <br> float: right;</code>
+</aside>
+<footer>
+	<code>&#60;footer&#62;</code>
+</footer>
+</div>
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

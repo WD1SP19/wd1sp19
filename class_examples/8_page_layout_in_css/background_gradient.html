@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--
+- Filename:     background_gradient.html
+- Description: 	Class Example of using CSS Background Gradient
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Background Gradients</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+section {
+	width: 800px;
+	height: 600px;
+	margin: 0 auto;
+}
+.grad1 section {
+  /* Fallback Color */
+	background: #444444;
+	/* Vendor Compatilbity Prefixes) */
+	background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#FFFFFF));
+  background: -webkit-linear-gradient(#000000, #FFFFFF);
+  background: -o-linear-gradient(#000000, #FFFFFF);
+	/* Standard syntax */
+  background: linear-gradient(#000000, #FFFFFF);
+}
+
+.grad2 section {
+	background: #444444;
+  background: linear-gradient(to right bottom, #000000, #FFFFFF);
+}
+
+.grad3 section {
+  background: #444444;
+  background: radial-gradient(#000000, #FFFFFF);
+}
+
+.grad4 section {
+  background: #444444;
+  background: linear-gradient(to right, #FF0000, #00FF00, #0000FF);
+}
+
+.grad5 section {
+	background: #444444;
+  background: linear-gradient(to right, #FF0000 30%, #00FF00 90%, #0000FF);
+}
+
+
+    </style>
+  </head>
+  <body>
+    <h1>CSS Background Gradients</h1>
+    <div class="container grad1">
+      <h2>Gradient (Top to Bottom)</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">section {
+  /* Fallback Color */
+  background: #444444;
+  /* Vendor Compatilbity Prefixes) */
+  background: -webkit-gradient(linear, left top, left bottom, from(#000000), to(#FFFFFF));
+  background: -webkit-linear-gradient(#000000, #FFFFFF);
+  background: -o-linear-gradient(#000000, #FFFFFF);
+	/* Standard syntax */
+  background: linear-gradient(#000000, #FFFFFF);
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+		<section>
+		</section>
+  </div>
+
+	<div class="container grad2">
+		<h2>Gradient (Top Left to Bottom Right)</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section&gt;
+&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">section {
+  background: #466368;
+  background: linear-gradient(to right bottom, #648880, #293f50);
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section>
+	</section>
+	</div>
+
+
+	<div class="container grad3">
+		<h2>Radial Gradient</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section&gt;
+&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">section {
+  background: #444444;
+  background: radial-gradient(#000000, #FFFFFF);
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section>
+	</section>
+	</div>
+
+	<div class="container grad4">
+		<h2>Gradient (Multiple Colors)</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section&gt;
+&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">section {
+  background: #444444;
+  background: linear-gradient(to right, #FF0000, #00FF00, #0000FF);
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section>
+	</section>
+	</div>
+
+	<div class="container grad5">
+		<h2>Gradient (Multiple Colors w/ Stops)</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;section&gt;
+&lt;/section&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">section {
+  background: #444444;
+  background: linear-gradient(to right, #FF0000 30%, #00FF00 90%, #0000FF);
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+	<section>
+	</section>
+	</div>
+
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>
