@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--
+- Filename:     flexible_layout.html
+- Description: 	Class Example of RWD Flexible Layout
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RWD Flexible Layout</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+  clear: both;
+}
+
+/* For Examples */
+.fixed .container {
+  width: 538px;
+}
+.fixed section,
+.fixed aside {
+  margin: 10px;
+  background: deepskyblue;
+  padding: 20px 0;
+  text-align: center;
+}
+.fixed section {
+  float: left;
+  width: 340px;
+}
+.fixed aside {
+  float: right;
+  width: 158px;
+}
+
+.flexible section,
+.flexible aside {
+  margin: 1.858736059%; /*  10px ÷ 538px = .018587361 */
+  background: deepskyblue;
+  padding: 20px 0;
+  text-align: center;
+}
+.flexible section {
+  float: left;
+  width: 63.197026%;    /* 340px ÷ 538px = .63197026 */
+}
+.flexible aside {
+  float: right;
+  width: 29.3680297%;  /* 158px ÷ 538px = .293680297 */
+}
+
+.container1, .container2, .container3 {
+  clear: both;
+  margin-bottom: 2em;
+}
+
+.container1 {
+  width: 100%;
+}
+.container2 {
+  width: 75%;
+}
+.container3 {
+  width: 50%;
+}
+
+
+.vh {
+  width: 75vw;
+  height: 10px;
+  background: black;
+  position: fixed;
+  bottom: 10px;
+}
+
+.vw {
+  height: 50vh;
+  width: 10px;
+  background: black;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <h1>RWD Flexible Layout</h1>
+    <div class="container fixed">
+      <h2>Fixed Layout</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;section&gt;Section&lt;/section&gt;
+  &lt;aside&gt;Aside&lt;/aside&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">.container {
+  width: 538px;
+}
+section,
+aside {
+  margin: 10px;
+  background: deepskyblue;
+  padding: 20px 0;
+  text-align: center;
+}
+section {
+  float: left;
+  width: 340px;
+}
+aside {
+  float: right;
+  width: 158px;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+    <div class="container">
+      <section>&lt;Section&gt;</section>
+      <aside>&lt;Aside&gt;</aside>
+    </div>
+
+  </div>
+
+
+  <div class="container flexible">
+    <h2>Fixed Layout Converted to RWD Flexible Layout</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;section&gt;Section&lt;/section&gt;
+  &lt;aside&gt;Aside&lt;/aside&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">section,
+aside {
+  margin: 1.858736059%; /*  10px ÷ 538px = .018587361 */
+  background: deepskyblue;
+  padding: 20px 0;
+  text-align: center;
+}
+section {
+  float: left;
+  width: 63.197026%;    /* 340px ÷ 538px = .63197026 */
+}
+aside {
+  float: right;
+  width: 29.3680297%;  /* 158px ÷ 538px = .293680297 */
+}</code></pre>
+      </div>
+  </div>
+  <h3 class="output">100%</h3>
+  <div class="container1">
+    <section>&lt;Section&gt;</section>
+    <aside>&lt;Aside&gt;</aside>
+  </div>
+  <h3 class="output">75%</h3>
+  <div class="container2">
+    <section>&lt;Section&gt;</section>
+    <aside>&lt;Aside&gt;</aside>
+  </div>
+  <h3 class="output">50%</h3>
+  <div class="container3">
+    <section>&lt;Section&gt;</section>
+    <aside>&lt;Aside&gt;</aside>
+  </div>
+
+</div>
+
+<div class="container">
+  <h2>Viewport Measurements</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;div class=&quot;vw&quot;&gt;&lt;/div&gt;
+&lt;div class=&quot;vh&quot;&gt;&lt;/div&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">.vh {
+  width: 75vw;
+  height: 10px;
+  background: black;
+  position: fixed;
+  bottom: 10px;
+}
+
+.vw {
+  height: 50vh;
+  width: 10px;
+  background: black;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}</code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<div class="vw"></div>
+<div class="vh"></div>
+
+</div>
+
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

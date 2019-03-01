@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!--
+- Filename:     flexible_media.html
+- Description: 	Class Example of RWD Flexible Media
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RWD Flexible Media</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+  clear: both;
+}
+
+/* For Examples */
+.container1, .container2, .container3 {
+  margin-bottom: 2em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container1 {
+  width: 100%;
+}
+.container2 {
+  width: 75%;
+}
+.container3 {
+  width: 50%;
+}
+
+    </style>
+  </head>
+  <body>
+    <h1>RWD Flexible Media</h1>
+
+  <div class="container flexible">
+    <h2>Flexible Images</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;div class=&quot;container1&quot;&gt;
+  &lt;img src=&quot;milky-way.jpg&quot; alt=&quot;Milky Way Galaxy Photo&quot;&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;output&quot;&gt;75%&lt;/h3&gt;
+&lt;div class=&quot;container2&quot;&gt;
+  &lt;img src=&quot;milky-way.jpg&quot; alt=&quot;Milky Way Galaxy Photo&quot;&gt;
+&lt;/div&gt;
+&lt;h3 class=&quot;output&quot;&gt;50%&lt;/h3&gt;
+&lt;div class=&quot;container3&quot;&gt;
+  &lt;img src=&quot;milky-way.jpg&quot; alt=&quot;Milky Way Galaxy Photo&quot;&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">img {
+  max-width: 100%;
+}
+.container1 {
+  width: 100%;
+}
+.container2 {
+  width: 75%;
+}
+.container3 {
+  width: 50%;
+}</code></pre>
+      </div>
+  </div>
+  <h3 class="output">100%</h3>
+  <div class="container1">
+    <img src="milky-way.jpg" alt="Milky Way Galaxy Photo">
+  </div>
+  <h3 class="output">75%</h3>
+  <div class="container2">
+    <img src="milky-way.jpg" alt="Milky Way Galaxy Photo">
+  </div>
+  <h3 class="output">50%</h3>
+  <div class="container3">
+    <img src="milky-way.jpg" alt="Milky Way Galaxy Photo">
+  </div>
+
+</div>
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

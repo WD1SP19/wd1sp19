@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<!--
+- Filename:     flexible_layout.html
+- Description: 	Class Example of RWD Media Queries
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>RWD Media Queries</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+  clear: both;
+}
+
+/* For Examples */
+.flexible section,
+.flexible aside {
+  background: deepskyblue;
+  padding: 20px 0;
+  text-align: center;
+}
+@media all and (min-width: 600px) {
+  .flexible section,
+  .flexible aside {
+    margin: 1%;
+  }
+  .flexible section {
+    float: left;
+    width: 58%;
+  }
+  .flexible aside {
+    float: right;
+    width: 38%;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}
+  </style>
+  </head>
+  <body>
+    <h1>RWD Media Queries</h1>
+    <div class="container flexible">
+      <h2>Mobile First RWD</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;div class=&quot;container&quot;&gt;
+  &lt;section&gt;Section&lt;/section&gt;
+  &lt;aside&gt;Aside&lt;/aside&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">section,
+aside {
+  background: deepskyblue;
+  padding: 20px 0;
+  text-align: center;
+}
+@media all and (min-width: 600px) {
+  section,
+  aside {
+    margin: 1%;
+  }
+  section {
+    float: left;
+    width: 58%;
+  }
+  aside {
+    float: right;
+    width: 38%;
+  }
+}
+
+@media all and (min-width: 1000px) {
+  body {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+    <div class="container">
+      <section>&lt;Section&gt;</section>
+      <aside>&lt;Aside&gt;</aside>
+    </div>
+
+  </div>
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>
