@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<!--
+- Filename:     table_css.html
+- Description: 	Class Example of HTML Tables w/ CSS
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Tables with CSS</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.basic table{
+  border-collapse: collapse;
+}
+.basic th,
+.basic td{
+  padding: .25em .5em;
+  border: 1px solid #000000;
+}
+.basic .left{
+  text-align: left;
+}
+.basic thead{
+  border-bottom: 3px solid #000000;
+}
+.basic tfoot{
+  border-top: 3px solid #000000;
+}
+
+.zebra table {
+  border-collapse: collapse;
+}
+.zebra th,
+.zebra td {
+  padding: .25em .5em;
+  border: 1px solid #000000;
+}
+.zebra th:first-child {
+  text-align: left;
+}
+.zebra tbody tr:nth-child(even) {
+  background: #EBEBEB;
+}
+.zebra thead {
+  border-bottom: 3px solid #000000;
+  background: #BEBEBE;
+}
+.zebra tfoot {
+  border-top: 3px solid #000000;
+}
+    </style>
+  </head>
+  <body>
+    <h1>HTML Tables and CSS</h1>
+    <div class="container basic">
+      <h2>Basic CSS</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th class=&quot;left&quot;&gt;Book&lt;/th&gt;
+			&lt;th&gt;Year Published&lt;/th&gt;
+			&lt;th&gt;Sales&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;PHP and MySQL&lt;/td&gt;
+			&lt;td&gt;2010&lt;/td&gt;
+			&lt;td&gt;$372,381&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;JavaScript and DOM Scripting&lt;/td&gt;
+			&lt;td&gt;2009&lt;/td&gt;
+			&lt;td&gt;$305,447&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Java Programming&lt;/td&gt;
+			&lt;td&gt;2011&lt;/td&gt;
+			&lt;td&gt;$392,444&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Java Servlets and JSP&lt;/td&gt;
+			&lt;td&gt;2008&lt;/td&gt;
+			&lt;td&gt;$328,992&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th  class=&quot;left&quot; colspan=&quot;2&quot;&gt;Total Sales&lt;/th&gt;
+			&lt;td&gt;$2,154,786&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">table{
+	border-collapse: collapse;
+}
+th,
+td{
+	padding: .25em .5em;
+	border: 1px solid #000000;
+}
+.left{
+	text-align: left;
+}
+thead{
+	border-bottom: 3px solid #000000;
+}
+tfoot{
+	border-top: 3px solid #000000;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+    <table>
+    	<thead>
+    		<tr>
+    			<th class="left">Book</th>
+    			<th>Year Published</th>
+    			<th>Sales</th>
+    		</tr>
+    	</thead>
+    	<tbody>
+    		<tr>
+    			<td>PHP and MySQL</td>
+    			<td>2010</td>
+    			<td>$372,381</td>
+    		</tr>
+    		<tr>
+    			<td>JavaScript and DOM Scripting</td>
+    			<td>2009</td>
+    			<td>$305,447</td>
+    		</tr>
+    		<tr>
+    			<td>Java Programming</td>
+    			<td>2011</td>
+    			<td>$392,444</td>
+    		</tr>
+    		<tr>
+    			<td>Java Servlets and JSP</td>
+    			<td>2008</td>
+    			<td>$328,992</td>
+    		</tr>
+    	</tbody>
+    	<tfoot>
+    		<tr>
+    			<th  class="left" colspan="2">Total Sales</th>
+    			<td>$2,154,786</td>
+    		</tr>
+    	</tfoot>
+    </table>
+  </div>
+
+	<div class="container zebra">
+		<h2>Table Zebra Striping</h2>
+		<div class="flex-example">
+			<div>
+				<h3>HTML</h3>
+					<pre><code class="language-html">&lt;table&gt;
+	&lt;thead&gt;
+		&lt;tr&gt;
+			&lt;th&gt;Book&lt;/th&gt;
+			&lt;th&gt;Year Published&lt;/th&gt;
+			&lt;th&gt;Sales&lt;/th&gt;
+		&lt;/tr&gt;
+	&lt;/thead&gt;
+	&lt;tbody&gt;
+		&lt;tr&gt;
+			&lt;td&gt;PHP and MySQL&lt;/td&gt;
+			&lt;td&gt;2010&lt;/td&gt;
+			&lt;td&gt;$372,381&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;JavaScript and DOM Scripting&lt;/td&gt;
+			&lt;td&gt;2009&lt;/td&gt;
+			&lt;td&gt;$305,447&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Java Programming&lt;/td&gt;
+			&lt;td&gt;2011&lt;/td&gt;
+			&lt;td&gt;$392,444&lt;/td&gt;
+		&lt;/tr&gt;
+		&lt;tr&gt;
+			&lt;td&gt;Java Servlets and JSP&lt;/td&gt;
+			&lt;td&gt;2008&lt;/td&gt;
+			&lt;td&gt;$328,992&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tbody&gt;
+	&lt;tfoot&gt;
+		&lt;tr&gt;
+			&lt;th colspan=&quot;2&quot;&gt;Total Sales&lt;/th&gt;
+			&lt;td&gt;$2,154,786&lt;/td&gt;
+		&lt;/tr&gt;
+	&lt;/tfoot&gt;
+&lt;/table&gt;</code></pre>
+			</div>
+			<div>
+				<h3>CSS</h3>
+					<pre><code class="language-css">table {
+	border-collapse: collapse;
+}
+th,
+td {
+	padding: .25em .5em;
+	border: 1px solid #000000;
+}
+th:first-child {
+	text-align: left;
+}
+tbody tr:nth-child(even) {
+	background: #EBEBEB;
+}
+thead {
+	border-bottom: 3px solid #000000;
+	background: #BEBEBE;
+}
+tfoot {
+	border-top: 3px solid #000000;
+}</code></pre>
+			</div>
+	</div>
+	<h3 class="output">Output:</h3>
+  <table>
+  	<thead>
+  		<tr>
+  			<th>Book</th>
+  			<th>Year Published</th>
+  			<th>Sales</th>
+  		</tr>
+  	</thead>
+  	<tbody>
+  		<tr>
+  			<td>PHP and MySQL</td>
+  			<td>2010</td>
+  			<td>$372,381</td>
+  		</tr>
+  		<tr>
+  			<td>JavaScript and DOM Scripting</td>
+  			<td>2009</td>
+  			<td>$305,447</td>
+  		</tr>
+  		<tr>
+  			<td>Java Programming</td>
+  			<td>2011</td>
+  			<td>$392,444</td>
+  		</tr>
+  		<tr>
+  			<td>Java Servlets and JSP</td>
+  			<td>2008</td>
+  			<td>$328,992</td>
+  		</tr>
+  	</tbody>
+  	<tfoot>
+  		<tr>
+  			<th colspan="2">Total Sales</th>
+  			<td>$2,154,786</td>
+  		</tr>
+  	</tfoot>
+  </table>
+
+	</div>
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

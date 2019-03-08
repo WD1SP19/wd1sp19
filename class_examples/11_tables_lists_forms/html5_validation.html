@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+- Filename:     html5_validation.html
+- Description: 	Class Example of HTML5 Form Validation
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Form Validation</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+form {
+  font-family: "Courier New", courier, monospace;
+}
+    </style>
+  </head>
+  <body>
+    <h1>HTML Form Validation</h1>
+    <div class="container basic">
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;form method=&quot;get&quot; action=&quot;process_form.html&quot;&gt;
+	&lt;fieldset id=&quot;one&quot;&gt;
+		&lt;legend&gt;Contact Information&lt;/legend&gt;
+		&lt;!-- Example of disabled autocomplete --&gt;
+		&lt;label for=&quot;f-name&quot;&gt;First Name: &amp;nbsp;&lt;/label&gt;
+		&lt;input type=&quot;text&quot; name=&quot;f-name&quot; id=&quot;f-name&quot; autocomplete=&quot;off&quot; /&gt;&lt;br /&gt;
+		&lt;!-- Example of required --&gt;
+		&lt;label for=&quot;l-name&quot;&gt;Last Name: &amp;nbsp;&amp;nbsp;&lt;/label&gt;
+		&lt;input type=&quot;text&quot; name=&quot;l-name&quot; id=&quot;l-name&quot; required=&quot;required&quot; /&gt;&lt;br /&gt;
+		&lt;!-- Example of pattern (Regular Expression) --&gt;
+		&lt;label for=&quot;phone&quot;&gt;Phone Number:&lt;/label&gt;
+		&lt;input type=&quot;text&quot;
+			   name=&quot;phone&quot;
+			   id=&quot;phone&quot;
+			   pattern=&quot;\d{3}[\-]\d{3}[\-]\d{4}&quot;
+			   placeholder=&quot;999-999-9999&quot;
+			   required=&quot;required&quot;
+			   title=&quot;The phone number must be in the following format: 999-999-9999&quot;
+		/&gt;&lt;br /&gt;
+	&lt;/fieldset&gt;
+	&lt;input type=&quot;submit&quot; value=&quot;Place Order&quot; name=&quot;submit&quot;&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+        <div>
+          <h3>Output</h3>
+          <form method="get" action="process_form.html">
+          	<fieldset id="one">
+          		<legend>Contact Information</legend>
+          		<!-- Example of disabled autocomplete -->
+          		<label for="f-name">First Name: &nbsp;</label>
+          		<input type="text" name="f-name" id="f-name" autocomplete="off" /><br />
+          		<!-- Example of required -->
+          		<label for="l-name">Last Name: &nbsp;&nbsp;</label>
+          		<input type="text" name="l-name" id="l-name" required="required" /><br />
+          		<!-- Example of pattern (Regular Expression) -->
+          		<label for="phone">Phone Number:</label>
+          		<input type="text"
+          			   name="phone"
+          			   id="phone"
+          			   pattern="\d{3}[\-]\d{3}[\-]\d{4}"
+          			   placeholder="999-999-9999"
+          			   required="required"
+          			   title="The phone number must be in the following format: 999-999-9999"
+          		/><br />
+          	</fieldset>
+          	<input type="submit" value="Place Order" name="submit">
+          </form>
+        </div>
+    </div>
+  </div>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

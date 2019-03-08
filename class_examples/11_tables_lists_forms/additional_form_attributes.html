@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!--
+- Filename:     addition_form_attributes.html
+- Description: 	Class Example of an HTML Form
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+form {
+  font-family: "Courier New", courier, monospace;
+}
+    </style>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <div class="container basic">
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;form method=&quot;get&quot; action=&quot;process_form.html&quot;&gt;
+	&lt;!-- disabled attribute --&gt;
+	&lt;label for=&quot;name-f&quot;&gt;First Name: &amp;nbsp;&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;name-f&quot; id=&quot;name-f&quot; value=&quot;Luke&quot; disabled=&quot;disabled&quot; /&gt;&lt;br /&gt;
+	&lt;!-- autofocus attribute --&gt;
+	&lt;label for=&quot;name-m&quot;&gt;Middle Name: &lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;name-m&quot; id=&quot;name-m&quot; /&gt;&lt;br /&gt;
+	&lt;!-- readonly attribute --&gt;
+	&lt;label for=&quot;name-l&quot;&gt;Last Name: &amp;nbsp;&amp;nbsp;&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;name-l&quot; id=&quot;name-l&quot; value=&quot;Sathrum&quot; readonly=&quot;readonly&quot; /&gt;&lt;br /&gt;
+	&lt;!-- placeholder attribute --&gt;
+	&lt;label for=&quot;phone&quot;&gt;Phone Number:&lt;/label&gt;&lt;input type=&quot;text&quot; name=&quot;phone&quot; id=&quot;phone&quot; autofocus=&quot;autofocus&quot; placeholder=&quot;###-###-####&quot; /&gt;&lt;br /&gt;
+	&lt;p&gt;Favorite Color(s)?&lt;/p&gt;
+	&lt;!-- disabled attribute on checkbox --&gt;
+	&lt;input type=&quot;checkbox&quot; name=&quot;color&quot; value=&quot;blue&quot; id=&quot;blue&quot; disabled=&quot;disabled&quot; /&gt;&lt;label&gt;Blue&lt;/label&gt;
+	&lt;input type=&quot;checkbox&quot; name=&quot;color&quot; value=&quot;green&quot; id=&quot;green&quot; checked=&quot;checked&quot; /&gt;&lt;label&gt;Green&lt;/label&gt;
+	&lt;input type=&quot;checkbox&quot; name=&quot;color&quot; value=&quot;other&quot; id=&quot;other&quot; /&gt;&lt;label&gt;Other&lt;/label&gt;
+	&lt;input type=&quot;submit&quot; value=&quot;Submit&quot; name=&quot;submit&quot; /&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+        <div>
+          <h3>Output</h3>
+          <form method="get" action="process_form.html">
+          	<!-- disabled attribute -->
+          	<label for="name-f">First Name: &nbsp;</label><input type="text" name="name-f" id="name-f" value="Luke" disabled="disabled" /><br />
+          	<!-- autofocus attribute -->
+          	<label for="name-m">Middle Name: </label><input type="text" name="name-m" id="name-m" /><br />
+          	<!-- readonly attribute -->
+          	<label for="name-l">Last Name: &nbsp;&nbsp;</label><input type="text" name="name-l" id="name-l" value="Sathrum" readonly="readonly" /><br />
+          	<!-- placeholder attribute -->
+          	<label for="phone">Phone Number:</label><input type="text" name="phone" id="phone" autofocus="autofocus" placeholder="###-###-####" /><br />
+          	<p>Favorite Color(s)?</p>
+          	<!-- disabled attribute on checkbox -->
+          	<input type="checkbox" name="color" value="blue" id="blue" disabled="disabled" /><label>Blue</label>
+          	<input type="checkbox" name="color" value="green" id="green" checked="checked" /><label>Green</label>
+          	<input type="checkbox" name="color" value="other" id="other" /><label>Other</label>
+          	<input type="submit" value="Submit" name="submit" />
+          </form>
+        </div>
+    </div>
+  </div>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

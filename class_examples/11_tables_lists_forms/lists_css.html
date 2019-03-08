@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!--
+- Filename:     lists_css.html
+- Description: 	Class Example of HTML Lists w/ CSS
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Lists with CSS</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.one ul {
+  list-style-type: circle;
+}
+
+.two ul {
+  list-style-image: url("leaf_icon.jpg");
+}
+
+.three ol {
+  list-style-type: lower-roman;
+}
+
+li {
+  margin: 10px 0 0;
+}
+#inside {
+  list-style-position: inside;
+  width: 100px;
+}
+#outside {
+  list-style-position: outside;
+  width: 100px;
+}
+    </style>
+  </head>
+  <body>
+    <h1>HTML Lists and CSS</h1>
+    <div class="container one">
+      <h2>list-style-type</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;section&gt;
+	&lt;h2&gt;Grocery List&lt;/h2&gt;
+	&lt;ul&gt;
+		&lt;li&gt;Coffee&lt;/li&gt;
+		&lt;li&gt;Milk&lt;/li&gt;
+		&lt;li&gt;Eggs&lt;/li&gt;
+		&lt;li&gt;Bread&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css">ul {
+	list-style-type: circle;
+}</code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+    <section>
+    	<h2>Grocery List</h2>
+    	<ul>
+    		<li>Coffee</li>
+    		<li>Milk</li>
+    		<li>Eggs</li>
+    		<li>Bread</li>
+    	</ul>
+    </section>
+  </div>
+
+  <div class="container two">
+    <h2>list-style-image</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;section&gt;
+  &lt;h2&gt;Grocery List&lt;/h2&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Coffee&lt;/li&gt;
+    &lt;li&gt;Milk&lt;/li&gt;
+    &lt;li&gt;Eggs&lt;/li&gt;
+    &lt;li&gt;Bread&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">ul {
+	list-style-image: url("leaf_icon.jpg");
+}</code></pre>
+      </div>
+  </div>
+  <h3 class="output">Output:</h3>
+  <section>
+    <h2>Grocery List</h2>
+    <ul>
+      <li>Coffee</li>
+      <li>Milk</li>
+      <li>Eggs</li>
+      <li>Bread</li>
+    </ul>
+  </section>
+</div>
+
+
+<div class="container three">
+  <h2>list-style-type</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;section&gt;
+&lt;h2&gt;Grocery List&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+  &lt;li&gt;Bread&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">ol {
+	list-style-type: lower-roman;
+}</code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<section>
+  <h2>Grocery List</h2>
+  <ol>
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Bread</li>
+  </ol>
+</section>
+</div>
+
+
+<div class="container four">
+  <h2>list-style-position</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;section&gt;
+	&lt;h2&gt;Inside&lt;/h2&gt;
+	&lt;ul id=&quot;inside&quot;&gt;
+		&lt;li&gt;This is a long sentence that will wrap&lt;/li&gt;
+	&lt;/ul&gt;
+	&lt;h2&gt;Outside&lt;/h2&gt;
+	&lt;ul id=&quot;outside&quot;&gt;
+		&lt;li&gt;This is a long sentence that will wrap&lt;/li&gt;
+	&lt;/ul&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css">#inside {
+  list-style-position: inside;
+  width: 100px;
+}
+#outside {
+  list-style-position: outside;
+  width: 100px;
+}</code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<section>
+	<h2>Inside</h2>
+	<ul id="inside">
+		<li>This is a long sentence that will wrap</li>
+	</ul>
+	<h2>Outside</h2>
+	<ul id="outside">
+		<li>This is a long sentence that will wrap</li>
+	</ul>
+</section>
+</div>
+
+<div class="container five">
+  <h2>start Attribute</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;section&gt;
+&lt;h2&gt;Grocery List&lt;/h2&gt;
+&lt;ol start=&quot;20&quot;&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+  &lt;li&gt;Bread&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css"></code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<section>
+  <h2>Grocery List</h2>
+  <ol start="20">
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Bread</li>
+  </ol>
+</section>
+</div>
+
+<div class="container five">
+  <h2>reversed Attribute</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;section&gt;
+&lt;h2&gt;Grocery List&lt;/h2&gt;
+&lt;ol reversed&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li&gt;Eggs&lt;/li&gt;
+  &lt;li&gt;Bread&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css"></code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<section>
+  <h2>Grocery List</h2>
+  <ol reversed>
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li>Eggs</li>
+    <li>Bread</li>
+  </ol>
+</section>
+</div>
+
+<div class="container five">
+  <h2>value Attribute</h2>
+  <div class="flex-example">
+    <div>
+      <h3>HTML</h3>
+        <pre><code class="language-html">&lt;section&gt;
+&lt;h2&gt;Grocery List&lt;/h2&gt;
+&lt;ol&gt;
+  &lt;li&gt;Coffee&lt;/li&gt;
+  &lt;li&gt;Milk&lt;/li&gt;
+  &lt;li value=&quot;10&quot;&gt;Eggs&lt;/li&gt;
+  &lt;li&gt;Bread&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/section&gt;</code></pre>
+    </div>
+    <div>
+      <h3>CSS</h3>
+        <pre><code class="language-css"></code></pre>
+    </div>
+</div>
+<h3 class="output">Output:</h3>
+<section>
+  <h2>Grocery List</h2>
+  <ol>
+    <li>Coffee</li>
+    <li>Milk</li>
+    <li value="10">Eggs</li>
+    <li>Bread</li>
+  </ol>
+</section>
+</div>
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

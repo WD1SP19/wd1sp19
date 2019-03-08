@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<!--
+- Filename:     form_css.html
+- Description: 	Class Example of HTML Form w/ CSS
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Form with CSS</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+.two form {
+  display: grid;
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #c1c1c1;
+  margin: 2rem auto 0 auto;
+  max-width: 900px;
+  padding: 1em;
+}
+.two form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+}
+.two form button {
+  background: lightgrey;
+  padding: 0.7em;
+  width: 100%;
+  border: 0;
+}
+.two form button:hover {
+  background: gold;
+}
+
+.two label {
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+.two input {
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+.two input:focus {
+  outline: 3px solid gold;
+}
+
+@media (min-width: 600px) {
+  .two form {
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+  }
+
+  .two label {
+    text-align: right;
+    grid-column: 1 / 2;
+  }
+
+  .two input,
+  .two button {
+    grid-column: 2 / 3;
+  }
+}
+    </style>
+  </head>
+  <body>
+    <h1>HTML Forms and CSS</h1>
+    <div class="container one">
+      <h2>No Style</h2>
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;form action=&quot;process_form.html&quot;&gt;
+  &lt;label for=&quot;firstName&quot; class=&quot;first-name&quot;&gt;First Name&lt;/label&gt;
+  &lt;input id=&quot;firstName&quot; type=&quot;text&quot;&gt;
+
+  &lt;label for=&quot;lastName&quot; class=&quot;last-name&quot;&gt;Last Name&lt;/label&gt;
+  &lt;input id=&quot;lastName&quot; type=&quot;text&quot;&gt;
+
+  &lt;!-- more inputs --&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+        <div>
+          <h3>CSS</h3>
+            <pre><code class="language-css"></code></pre>
+        </div>
+    </div>
+    <h3 class="output">Output:</h3>
+<form action="process_form.html">
+	<label for="firstName1" class="first-name">First Name</label>
+	<input id="firstName1" type="text">
+
+	<label for="lastName1" class="last-name">Last Name</label>
+	<input id="lastName1" type="text">
+
+	<label for="job1">Job</label>
+	<input id="job1" type="text">
+
+	<label for="age1">Age</label>
+	<input id="age1" type="text">
+
+	<label for="email1">Email</label>
+	<input id="email1" type="email">
+
+	<button>Submit</button>
+</form>
+  </div>
+
+  <div class="container two">
+    <h2>Using CSS Grids</h2>
+    <div class="flex-example">
+      <div>
+        <h3>HTML</h3>
+          <pre><code class="language-html">&lt;form action=&quot;process_form.html&quot;&gt;
+  &lt;label for=&quot;firstName&quot; class=&quot;first-name&quot;&gt;First Name&lt;/label&gt;
+  &lt;input id=&quot;firstName&quot; type=&quot;text&quot;&gt;
+
+  &lt;label for=&quot;lastName&quot; class=&quot;last-name&quot;&gt;Last Name&lt;/label&gt;
+  &lt;input id=&quot;lastName&quot; type=&quot;text&quot;&gt;
+
+  &lt;!-- more inputs --&gt;
+&lt;/form&gt;</code></pre>
+      </div>
+      <div>
+        <h3>CSS</h3>
+          <pre><code class="language-css">form {
+  display: grid;
+  padding: 1em;
+  background: #f9f9f9;
+  border: 1px solid #c1c1c1;
+  margin: 2rem auto 0 auto;
+  max-width: 900px;
+  padding: 1em;
+}
+form input {
+  background: #fff;
+  border: 1px solid #9c9c9c;
+}
+form button {
+  background: lightgrey;
+  padding: 0.7em;
+  width: 100%;
+  border: 0;
+}
+form button:hover {
+  background: gold;
+}
+
+label {
+  padding: 0.5em 0.5em 0.5em 0;
+}
+
+input {
+  padding: 0.7em;
+  margin-bottom: 0.5rem;
+}
+input:focus {
+  outline: 3px solid gold;
+}
+
+@media (min-width: 600px) {
+  form {
+    grid-template-columns: 200px 1fr;
+    grid-gap: 16px;
+  }
+
+  label {
+    text-align: right;
+    grid-column: 1 / 2;
+  }
+
+  input,
+  button {
+    grid-column: 2 / 3;
+  }
+}</code></pre>
+      </div>
+  </div>
+  <h3 class="output">Output:</h3>
+<form action="process_form.html">
+<label for="firstName" class="first-name">First Name</label>
+<input id="firstName" type="text">
+
+<label for="lastName" class="last-name">Last Name</label>
+<input id="lastName" type="text">
+
+<label for="job">Job</label>
+<input id="job" type="text">
+
+<label for="age">Age</label>
+<input id="age" type="text">
+
+<label for="email">Email</label>
+<input id="email" type="email">
+
+<button>Submit</button>
+</form>
+</div>
+
+
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>

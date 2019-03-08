@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!--
+- Filename:     form.html
+- Description: 	Class Example of an HTML Form
+- Author:       Luke Sathrum
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Forms</title>
+    <link rel="stylesheet" href="../../helpers/prism.css">
+    <style>
+/* For Structure */
+.flex-example {
+  display: flex;
+  align-items: flex-start;
+}
+
+.flex-example div {
+  flex: 1 100%;
+  margin: 0 1em;
+}
+
+.container {
+  margin-bottom: 30em;
+}
+
+h3.output {
+  background: #f5f2f0;
+}
+
+/* For Examples */
+form {
+  font-family: "Courier New", courier, monospace;
+}
+    </style>
+  </head>
+  <body>
+    <h1>HTML Forms</h1>
+    <div class="container basic">
+      <div class="flex-example">
+        <div>
+          <h3>HTML</h3>
+            <pre><code class="language-html">&lt;form action=&quot;process_form.html&quot; method=&quot;get&quot; id=&quot;login-form&quot;&gt;
+	Username: &lt;input name=&quot;un&quot; type=&quot;text&quot; value=&quot;lukeatbutte&quot; /&gt;&lt;br /&gt;
+	Password: &lt;input name=&quot;pw&quot; type=&quot;password&quot; maxlength=&quot;10&quot; /&gt;&lt;br /&gt;
+	Comments: &lt;textarea name=&quot;comments&quot; cols=&quot;15&quot;&gt;DEFAULT TEXT&lt;/textarea&gt;&lt;br /&gt;
+	&lt;input type=&quot;reset&quot; value=&quot;Reset&quot; /&gt;
+	&lt;input type=&quot;submit&quot; value=&quot;Login&quot; /&gt;
+&lt;/form&gt;</code></pre>
+        </div>
+        <div>
+          <h3>Output</h3>
+          <form action="process_form.html" method="get" id="login-form">
+          	Username: <input name="un" type="text" value="lukeatbutte" /><br />
+          	Password: <input name="pw" type="password" maxlength="10" /><br />
+          	Comments: <textarea name="comments" cols="15">DEFAULT TEXT</textarea><br />
+          	<input type="reset" value="Reset" />
+          	<input type="submit" value="Login" />
+          </form>
+        </div>
+    </div>
+  </div>
+
+
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+    <script src="../../helpers/prism.js"></script>
+  </body>
+</html>
